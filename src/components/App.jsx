@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Analytics from './Analytics';
 import ScrollToTop from './ScrollToTop';
+import NewsLetter from './NewsLetter';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <ScrollToTop />
       <Hero />
       <Analytics />
+      <NewsLetter />
     </>
   );
 };
