@@ -2,11 +2,13 @@ import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const NewsLetter = () => {
+  const emailRegex =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const [input, setInput] = useState('');
   const [invalid, setInvalid] = useState('text-slate-900');
   const onChangeInput = useCallback((ev) => {
     setInput(ev.currentTarget.value);
-    ev.currentTarget.value.includes('@')
+    emailRegex.test(ev.currentTarget.value) || ev.currentTarget.value === ''
       ? setInvalid('text-slate-900')
       : setInvalid('text-pink-600 focus:ring-pink-600');
   });
@@ -28,10 +30,11 @@ const NewsLetter = () => {
               value={input}
               className={`focus:outline-none focus:ring-green-700 focus:ring-4 w-full rounded-md py-2 px-4 ${invalid}`}
               placeholder='Enter your email'
+              required
             />
             <button
               type='submit'
-              className='w-full sm:w-36 bg-green-600 min-w-[120px] rounded-md py-2 px-4'
+              className='w-full sm:w-36 bg-green-600 min-w-[120px] rounded-md py-2 px-4 hover:bg-transparent hover:ring-2 hover:ring-green-600'
             >
               Notify Me
             </button>
