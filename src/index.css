@@ -11,5 +11,5 @@ html {
 }
 
 body {
-  @apply bg-gray-900;
+  @apply bg-gradient-to-tr from-gray-900 to-gray-700;
 }

@@ -5,23 +5,23 @@ const Navbar = () => {
   const [color, setColor] = useState('bg-transparent');
   const handleNav = () => setNav(!nav);
   const handleColor = () =>
-    window.scrollY >= 40
-      ? setColor('bg-slate-900')
+    window.scrollY >= 100
+      ? setColor('bg-gradient-to-br from-slate-800 to-slate-600')
       : setColor('bg-transparent');
 
   window.addEventListener('scroll', () => handleColor());
 
   return (
     <div
-      className={`sticky ${color} transition-all duration-150 top-0 flex justify-between mx-auto max-w-[1240px] items-center h-16 px-4 py-4`}
+      className={`sticky ${color} transition-all duration-150 top-0 flex justify-between mx-auto xl:px-6 items-center h-16 px-4 py-4`}
     >
       <p className='text-lg font-bold text-green-500'>NAVBAR</p>
       <ul className='hidden  sm:flex gap-5 '>
-        <li>Home</li>
-        <li>Company</li>
-        <li>Resources</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li className='hover:text-sky-500  cursor-pointer'>Home</li>
+        <li className='hover:text-sky-500  cursor-pointer'>Company</li>
+        <li className='hover:text-sky-500  cursor-pointer'>Resources</li>
+        <li className='hover:text-sky-500  cursor-pointer'>About</li>
+        <li className='hover:text-sky-500  cursor-pointer'>Contact</li>
       </ul>
       <div
         onClick={() => handleNav()}
@@ -32,8 +32,8 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'fixed top-0 left-0 bg-gradient-to-r from-slate-900/80 to-slate-600 w-2/3 h-full  transition-all ease-in-out duration-300'
-            : 'fixed top-0 left-[-100%] bg-gradient-to-r from-slate-900/80 to-slate-600 w-2/3 h-full  transition-all ease-out duration-700'
+            ? 'fixed top-0 left-0 bg-gradient-to-r from-slate-900/80 to-slate-800 w-2/3 h-full  transition-all ease-in-out duration-300'
+            : 'fixed top-0 left-[-100%] bg-gradient-to-r from-slate-900/80 to-slate-800 w-2/3 h-full  transition-all ease-out duration-700'
         }
       >
         <ul className=''>
