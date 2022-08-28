@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`sticky ${color} transition-all duration-150 top-0 flex justify-between mx-auto xl:px-6 items-center h-16 px-4 py-4`}
+      className={`z-[100] sticky ${color} transition-all duration-150 top-0 flex justify-between mx-auto xl:px-6 items-center h-16 px-4 py-4`}
     >
       <p className='text-lg font-bold text-green-500'>NAVBAR</p>
       <ul className='hidden  sm:flex gap-5 '>

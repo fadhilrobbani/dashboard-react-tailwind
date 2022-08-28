@@ -8,7 +8,7 @@ const Hero = () => {
         Growing with data analysis
       </h1>
       <h1 className='text-4xl md:text-7xl font-bold'>Grow with data</h1>
-      <div className='flex gap-1'>
+      <div>
         <p className='text-base md:text-2xl font-semibold'>
           Lorem ipsum dolor sit, amet consectetur
         </p>

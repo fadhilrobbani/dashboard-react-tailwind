@@ -9,21 +9,23 @@ import { Routes, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard.jsx';
 import Blog from '../pages/Blog.jsx';
 import About from '../pages/About.jsx';
+import Footer from './Footer';
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Dashboard />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/about' element={<About />} />
-      </Routes>
+      </Routes> */}
       <ScrollToTop />
       <Hero />
       <Analytics />
       <NewsLetter />
       <Cards />
+      <Footer />
     </>
   );
 };
